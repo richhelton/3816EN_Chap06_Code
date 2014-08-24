@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nservicebusModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="nservicebusEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="nservicebusModel.C__MigrationHistory" />
+    <EntitySet Name="MessageEndpointMappingDBs" EntityType="nservicebusModel.MessageEndpointMappingDB" />
+    <EntitySet Name="UnicastBusConfigDBs" EntityType="nservicebusModel.UnicastBusConfigDB" />
+    <AssociationSet Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" Association="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+      <End Role="UnicastBusConfigDBs" EntitySet="UnicastBusConfigDBs" />
+      <End Role="MessageEndpointMappingDBs" EntitySet="MessageEndpointMappingDBs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MessageEndpointMappingDB">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UnicastBusConfigDBId" Type="Int32" Nullable="false" />
+    <Property Name="AssemblyName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Endpoint" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Messages" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Namespace" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TypeFullName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UnicastBusConfigDB" Relationship="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" FromRole="MessageEndpointMappingDBs" ToRole="UnicastBusConfigDBs" />
+  </EntityType>
+  <EntityType Name="UnicastBusConfigDB">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DistributorControlAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DistributorDataAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ForwardReceivedMessagesTo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TimeoutManagerAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TimeToBeReceivedOnForwardedMessages" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="MessageEndpointMappingDBs" Relationship="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" FromRole="UnicastBusConfigDBs" ToRole="MessageEndpointMappingDBs" />
+  </EntityType>
+  <Association Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+    <End Role="UnicastBusConfigDBs" Type="nservicebusModel.UnicastBusConfigDB" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MessageEndpointMappingDBs" Type="nservicebusModel.MessageEndpointMappingDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnicastBusConfigDBs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MessageEndpointMappingDBs">
+        <PropertyRef Name="UnicastBusConfigDBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

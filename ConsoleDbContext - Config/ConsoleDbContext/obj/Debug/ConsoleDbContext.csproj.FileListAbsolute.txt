@@ -1,0 +1,79 @@
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\ConsoleDbContext.pdb
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\EntityFramework.dll
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.dll
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\EntityFramework.xml
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.xml
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\obj\Debug\ConsoleDbContext.csprojResolveAssemblyReference.cache
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+F:\3816EN_CHap08\ConsoleDbContext\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+F:\3816EN_CHap08\SAVE\ConsoleDbContext\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+F:\3816EN_CHap08\SAVE\ConsoleDbContext\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.dll
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.dll
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.dll
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.dll
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.xml
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.xml
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.xml
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.pdb
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.xml
+F:\3816EN_CHap08\SAVE\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.csprojResolveAssemblyReference.cache
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.pdb
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.dll
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.dll
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.dll
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.dll
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.xml
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.xml
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.pdb
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.xml
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.pdb
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.xml
+F:\Rewrites3_June27_2014\3816_Chap07\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.csprojResolveAssemblyReference.cache
+C:\Code_August\3816_chap05\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+C:\Code_August\3816_chap05\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+C:\Code_August\3816_chap05\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.pdb
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.dll
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.dll
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.dll
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.xml
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.pdb
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.xml
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.pdb
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.xml
+C:\Code_August\3816_Chap06\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.csprojResolveAssemblyReference.cache
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe.config
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.exe
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\obj\Debug\ConsoleDbContext.pdb
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.exe
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\ConsoleDbContext.pdb
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.dll
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.dll
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.dll
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.dll
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.xml
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\EntityFramework.SqlServer.xml
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.pdb
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.xml
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.pdb
+F:\CodeFiles\3816EN_Chap06_Code\ConsoleDbContext - Config\ConsoleDbContext\bin\Debug\NServiceBus.Core.xml

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="nservicebusModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="nservicebusModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="nservicebusModel.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageEndpointMappingDBs" EntityType="nservicebusModel.Store.MessageEndpointMappingDBs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UnicastBusConfigDBs" EntityType="nservicebusModel.Store.UnicastBusConfigDBs" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" Association="nservicebusModel.Store.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+            <End Role="UnicastBusConfigDBs" EntitySet="UnicastBusConfigDBs" />
+            <End Role="MessageEndpointMappingDBs" EntitySet="MessageEndpointMappingDBs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="MessageEndpointMappingDBs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnicastBusConfigDBId" Type="int" Nullable="false" />
+          <Property Name="AssemblyName" Type="nvarchar(max)" />
+          <Property Name="Endpoint" Type="nvarchar(max)" />
+          <Property Name="Messages" Type="nvarchar(max)" />
+          <Property Name="Namespace" Type="nvarchar(max)" />
+          <Property Name="TypeFullName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UnicastBusConfigDBs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DistributorControlAddress" Type="nvarchar(max)" />
+          <Property Name="DistributorDataAddress" Type="nvarchar(max)" />
+          <Property Name="ForwardReceivedMessagesTo" Type="nvarchar(max)" />
+          <Property Name="TimeoutManagerAddress" Type="nvarchar(max)" />
+          <Property Name="TimeToBeReceivedOnForwardedMessages" Type="time" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+          <End Role="UnicastBusConfigDBs" Type="nservicebusModel.Store.UnicastBusConfigDBs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageEndpointMappingDBs" Type="nservicebusModel.Store.MessageEndpointMappingDBs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnicastBusConfigDBs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MessageEndpointMappingDBs">
+              <PropertyRef Name="UnicastBusConfigDBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nservicebusModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="nservicebusEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="nservicebusModel.C__MigrationHistory" />
+          <EntitySet Name="MessageEndpointMappingDBs" EntityType="nservicebusModel.MessageEndpointMappingDB" />
+          <EntitySet Name="UnicastBusConfigDBs" EntityType="nservicebusModel.UnicastBusConfigDB" />
+          <AssociationSet Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" Association="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+            <End Role="UnicastBusConfigDBs" EntitySet="UnicastBusConfigDBs" />
+            <End Role="MessageEndpointMappingDBs" EntitySet="MessageEndpointMappingDBs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MessageEndpointMappingDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UnicastBusConfigDBId" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Endpoint" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Messages" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Namespace" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TypeFullName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="UnicastBusConfigDB" Relationship="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" FromRole="MessageEndpointMappingDBs" ToRole="UnicastBusConfigDBs" />
+        </EntityType>
+        <EntityType Name="UnicastBusConfigDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DistributorControlAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DistributorDataAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ForwardReceivedMessagesTo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TimeoutManagerAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TimeToBeReceivedOnForwardedMessages" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="MessageEndpointMappingDBs" Relationship="nservicebusModel.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" FromRole="UnicastBusConfigDBs" ToRole="MessageEndpointMappingDBs" />
+        </EntityType>
+        <Association Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+          <End Role="UnicastBusConfigDBs" Type="nservicebusModel.UnicastBusConfigDB" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageEndpointMappingDBs" Type="nservicebusModel.MessageEndpointMappingDB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnicastBusConfigDBs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MessageEndpointMappingDBs">
+              <PropertyRef Name="UnicastBusConfigDBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nservicebusModelStoreContainer" CdmEntityContainer="nservicebusEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="nservicebusModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessageEndpointMappingDBs">
+            <EntityTypeMapping TypeName="nservicebusModel.MessageEndpointMappingDB">
+              <MappingFragment StoreEntitySet="MessageEndpointMappingDBs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UnicastBusConfigDBId" ColumnName="UnicastBusConfigDBId" />
+                <ScalarProperty Name="AssemblyName" ColumnName="AssemblyName" />
+                <ScalarProperty Name="Endpoint" ColumnName="Endpoint" />
+                <ScalarProperty Name="Messages" ColumnName="Messages" />
+                <ScalarProperty Name="Namespace" ColumnName="Namespace" />
+                <ScalarProperty Name="TypeFullName" ColumnName="TypeFullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnicastBusConfigDBs">
+            <EntityTypeMapping TypeName="nservicebusModel.UnicastBusConfigDB">
+              <MappingFragment StoreEntitySet="UnicastBusConfigDBs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DistributorControlAddress" ColumnName="DistributorControlAddress" />
+                <ScalarProperty Name="DistributorDataAddress" ColumnName="DistributorDataAddress" />
+                <ScalarProperty Name="ForwardReceivedMessagesTo" ColumnName="ForwardReceivedMessagesTo" />
+                <ScalarProperty Name="TimeoutManagerAddress" ColumnName="TimeoutManagerAddress" />
+                <ScalarProperty Name="TimeToBeReceivedOnForwardedMessages" ColumnName="TimeToBeReceivedOnForwardedMessages" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

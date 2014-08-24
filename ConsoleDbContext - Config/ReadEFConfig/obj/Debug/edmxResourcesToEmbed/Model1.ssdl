@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nservicebusModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="nservicebusModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="nservicebusModel.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessageEndpointMappingDBs" EntityType="nservicebusModel.Store.MessageEndpointMappingDBs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnicastBusConfigDBs" EntityType="nservicebusModel.Store.UnicastBusConfigDBs" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId" Association="nservicebusModel.Store.FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+      <End Role="UnicastBusConfigDBs" EntitySet="UnicastBusConfigDBs" />
+      <End Role="MessageEndpointMappingDBs" EntitySet="MessageEndpointMappingDBs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="MessageEndpointMappingDBs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnicastBusConfigDBId" Type="int" Nullable="false" />
+    <Property Name="AssemblyName" Type="nvarchar(max)" />
+    <Property Name="Endpoint" Type="nvarchar(max)" />
+    <Property Name="Messages" Type="nvarchar(max)" />
+    <Property Name="Namespace" Type="nvarchar(max)" />
+    <Property Name="TypeFullName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UnicastBusConfigDBs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DistributorControlAddress" Type="nvarchar(max)" />
+    <Property Name="DistributorDataAddress" Type="nvarchar(max)" />
+    <Property Name="ForwardReceivedMessagesTo" Type="nvarchar(max)" />
+    <Property Name="TimeoutManagerAddress" Type="nvarchar(max)" />
+    <Property Name="TimeToBeReceivedOnForwardedMessages" Type="time" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_MessageEndpointMappingDBs_dbo_UnicastBusConfigDBs_UnicastBusConfigDBId">
+    <End Role="UnicastBusConfigDBs" Type="nservicebusModel.Store.UnicastBusConfigDBs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MessageEndpointMappingDBs" Type="nservicebusModel.Store.MessageEndpointMappingDBs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnicastBusConfigDBs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MessageEndpointMappingDBs">
+        <PropertyRef Name="UnicastBusConfigDBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

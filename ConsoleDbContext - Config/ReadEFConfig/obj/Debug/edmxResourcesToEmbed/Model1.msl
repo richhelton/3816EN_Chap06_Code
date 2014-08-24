@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nservicebusModelStoreContainer" CdmEntityContainer="nservicebusEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="nservicebusModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageEndpointMappingDBs">
+      <EntityTypeMapping TypeName="nservicebusModel.MessageEndpointMappingDB">
+        <MappingFragment StoreEntitySet="MessageEndpointMappingDBs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UnicastBusConfigDBId" ColumnName="UnicastBusConfigDBId" />
+          <ScalarProperty Name="AssemblyName" ColumnName="AssemblyName" />
+          <ScalarProperty Name="Endpoint" ColumnName="Endpoint" />
+          <ScalarProperty Name="Messages" ColumnName="Messages" />
+          <ScalarProperty Name="Namespace" ColumnName="Namespace" />
+          <ScalarProperty Name="TypeFullName" ColumnName="TypeFullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnicastBusConfigDBs">
+      <EntityTypeMapping TypeName="nservicebusModel.UnicastBusConfigDB">
+        <MappingFragment StoreEntitySet="UnicastBusConfigDBs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DistributorControlAddress" ColumnName="DistributorControlAddress" />
+          <ScalarProperty Name="DistributorDataAddress" ColumnName="DistributorDataAddress" />
+          <ScalarProperty Name="ForwardReceivedMessagesTo" ColumnName="ForwardReceivedMessagesTo" />
+          <ScalarProperty Name="TimeoutManagerAddress" ColumnName="TimeoutManagerAddress" />
+          <ScalarProperty Name="TimeToBeReceivedOnForwardedMessages" ColumnName="TimeToBeReceivedOnForwardedMessages" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
